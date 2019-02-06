@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE:http://localhost:5000/eureka/}
+server:
+  port: ${SERVER_PORT:5002}
+spring:
+  application:
+    name: api-gateway
+zuul:
+  routes:
+    eleme:
+      path: /eleme/**
+      serviceId: eleme
